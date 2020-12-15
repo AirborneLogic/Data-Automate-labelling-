@@ -1,3 +1,10 @@
+import geopandas as gpd
+gpd.options.display_precision=3
+import shapely.geometry
+
+shp_path = r"C:\Users\LonghanZhang\Airborne Logic\ABL-Team Site - Longhan\jupyter_demos\test.shp"
+shp = gpd.read_file(shp_path)
+
 new_list=shp.geometry
 
 d=list(list(new_list.loc[0].coords))
