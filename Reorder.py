@@ -23,7 +23,7 @@ print(b)
     
 
 # print('above coords is before the swap              below coords is after swap')
-def find_min_y(gdf,direction):
+def reorder(gdf,direction):
     output = {}
     if (direction=="north"):
         for i,row in gdf.iterrows():
@@ -57,7 +57,7 @@ def find_min_y(gdf,direction):
            
             
 
-new = find_min_y(shp,"north")
+new = reorder(shp,"north")
 
 print('===========================')
 # type (new)
@@ -67,3 +67,5 @@ for i,row in shp.iterrows():
 print('===========================')
 for i,line in new.items():
     print(list(line.coords))
+
+    
