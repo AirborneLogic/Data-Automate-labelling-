@@ -56,7 +56,11 @@ def count_line(direction,start_val,gdf):
             new_list.append(temp);
             
         gdf['row_number']=new_list;
-            
+    
+    if 'x' in gdf.columns:
+        gdf = gdf.drop('x', axis = 1)
+    else:
+        gdf = gdf.drop('y', axis = 1)
     return gdf    
 
 
