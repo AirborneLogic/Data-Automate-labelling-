@@ -61,6 +61,7 @@ def count_line(direction,start_val,gdf):
         gdf = gdf.drop('x', axis = 1)
     else:
         gdf = gdf.drop('y', axis = 1)
+    gdf = gdf.sort_index()
     return gdf    
 
 
