@@ -11,8 +11,9 @@ import pandas as pd
 # new_list=[];
 
 def count_line(direction,start_val,gdf):
-    length=len(gdf)
-    print(length)
+    # length=len(gdf)
+    # print(length)
+    new_list = []
     if (direction=="north"):
         gdf['y'] = gdf.centroid.y                     #   store the y axis into new column
         gdf=gdf.sort_values(by='y',ascending=True)    #   all columns will be sorted basing on the y value
