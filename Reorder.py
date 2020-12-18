@@ -52,7 +52,8 @@ def reorder(gdf,direction):
                 new_line = shapely.geometry.LineString(list(row['geometry'].coords)[::-1])  #swap, logic: first point x is less than second x ,we do not flip ,otherwise...
             else:
                 new_line = row['geometry']
-            output[i] = new_line     
+            output[i] = new_line 
+    output = gpd.GeoSeries(output)    
     return output
            
             
