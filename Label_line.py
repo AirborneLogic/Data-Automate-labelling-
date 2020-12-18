@@ -16,7 +16,7 @@ def count_line(direction,start_val,gdf):
     new_list = []
     if (direction=="north"):
         gdf['y'] = gdf.centroid.y                     #   store the y axis into new column
-        gdf=gdf.sort_values(by='y',ascending=True)    #   all columns will be sorted basing on the y value
+        gdf=gdf.sort_values(by='y',ascending=False)    #   all columns will be sorted basing on the y value
         
         for i in range(0,len(gdf)):                   #   iterate each rows in GDF
             temp=start_val+i;                         #   start value increment one at each iteration
@@ -27,7 +27,7 @@ def count_line(direction,start_val,gdf):
         
     if (direction=="south"):
         gdf['y']=gdf.centroid.y
-        gdf=gdf.sort_values(by='y',ascending=False)
+        gdf=gdf.sort_values(by='y',ascending=True)
 
         for i in range(0,len(gdf)):
             temp=start_val+i;
@@ -38,7 +38,7 @@ def count_line(direction,start_val,gdf):
         
     if (direction=="east"):
         gdf['x']=gdf.centroid.x
-        gdf=gdf.sort_values(by='x',ascending=True)
+        gdf=gdf.sort_values(by='x',ascending=False)
 
         for i in range(0,len(gdf)):
             temp=start_val+i;
@@ -49,7 +49,7 @@ def count_line(direction,start_val,gdf):
         
     if (direction=="west"):
         gdf['x']=gdf.centroid.x
-        gdf=gdf.sort_values(by='x',ascending=False)
+        gdf=gdf.sort_values(by='x',ascending=True)
         
         for i in range(0,len(gdf)):
             temp=start_val+i
