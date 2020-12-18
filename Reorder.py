@@ -1,21 +1,21 @@
 import geopandas as gpd
-gpd.options.display_precision=3
+# gpd.options.display_precision=3
 import shapely.geometry
 
-shp_path = r"C:\Users\LonghanZhang\Airborne Logic\ABL-Team Site - Longhan\jupyter_demos\test.shp"
-shp = gpd.read_file(shp_path)
+# shp_path = r"C:\Users\LonghanZhang\Airborne Logic\ABL-Team Site - Longhan\jupyter_demos\test.shp"
+# shp = gpd.read_file(shp_path)
 
-new_list=shp.geometry
+# new_list=shp.geometry
 
-d=list(list(new_list.loc[0].coords))
-c=list(list(new_list.loc[0].coords)[0])
-a=list(list(new_list.loc[0].coords)[0])[0]
-b=list(list(new_list.loc[0].coords)[1])[0]  # first value is rows ,second value is loc of points ,third is x or y
+# d=list(list(new_list.loc[0].coords))
+# c=list(list(new_list.loc[0].coords)[0])
+# a=list(list(new_list.loc[0].coords)[0])[0]
+# b=list(list(new_list.loc[0].coords)[1])[0]  # first value is rows ,second value is loc of points ,third is x or y
 
-print(d)
-print(c)
-print(a)
-print(b)
+# print(d)
+# print(c)
+# print(a)
+# print(b)
 
 
 # for i in new_list:
@@ -57,15 +57,15 @@ def reorder(gdf,direction):
            
             
 
-new = reorder(shp,"north")
+# new = reorder(shp,"north")
 
-print('===========================')
-# type (new)
-for i,row in shp.iterrows():
-    print(list(row['geometry'].coords))
+# print('===========================')
+# # type (new)
+# for i,row in shp.iterrows():
+#     print(list(row['geometry'].coords))
 
-print('===========================')
-for i,line in new.items():
-    print(list(line.coords))
+# print('===========================')
+# for i,line in new.items():
+#     print(list(line.coords))
 
     

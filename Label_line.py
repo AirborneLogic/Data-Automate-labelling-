@@ -3,12 +3,12 @@ gpd.options.display_precision=3
 import shapely.geometry
 import pandas as pd
 
-shp_path = r"C:\Users\LonghanZhang\Airborne Logic\ABL-Team Site - Longhan\jupyter_demos\test.shp"
-shp = gpd.read_file(shp_path)
+# shp_path = r"C:\Users\LonghanZhang\Airborne Logic\ABL-Team Site - Longhan\jupyter_demos\test.shp"
+# shp = gpd.read_file(shp_path)
 
 
 
-new_list=[];
+# new_list=[];
 
 def count_line(direction,start_val,gdf):
     length=len(gdf)
@@ -59,5 +59,5 @@ def count_line(direction,start_val,gdf):
     return gdf    
 
 
-ha=count_line("east",6,shp)
-ha
+# ha=count_line("east",6,shp)
+# ha
