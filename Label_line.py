@@ -22,7 +22,7 @@ def count_line(direction,start_val,gdf):
             temp=start_val+i;                         #   start value increment one at each iteration
             new_list.append(temp);                    #   store the value into list
         
-        gdf['rank']=new_list;                         #   label the rank  
+        gdf['row_number']=new_list;                         #   label the rank  
         
         
     if (direction=="south"):
@@ -33,7 +33,7 @@ def count_line(direction,start_val,gdf):
             temp=start_val+i;
             new_list.append(temp);
         
-        gdf['rank']=new_list;
+        gdf['row_number']=new_list;
         
         
     if (direction=="east"):
@@ -44,7 +44,7 @@ def count_line(direction,start_val,gdf):
             temp=start_val+i;
             new_list.append(temp);
         
-        gdf['rank']=new_list;
+        gdf['row_number']=new_list;
         
         
     if (direction=="west"):
@@ -55,7 +55,7 @@ def count_line(direction,start_val,gdf):
             temp=start_val+i
             new_list.append(temp);
             
-        gdf['rank']=new_list;
+        gdf['row_number']=new_list;
             
     return gdf    
 
