@@ -27,28 +27,28 @@ def reorder(gdf,direction):
     output = {}
     if (direction=="north"):
         for i,row in gdf.iterrows():
-            if list(row['geometry'].coords)[0][1]<list(row['geometry'].coords)[1][1]:        # if the first point y vlaue is less than second point y value 
+            if list(row['geometry'].coords)[0][1]<list(row['geometry'].coords)[-1][1]:        # if the first point y vlaue is less than second point y value 
                 new_line = shapely.geometry.LineString(list(row['geometry'].coords)[::-1])  #swap
             else:
                 new_line = row['geometry']
             output[i] = new_line
     if (direction=="south"):
         for i,row in gdf.iterrows():
-            if list(row['geometry'].coords)[0][1]>list(row['geometry'].coords)[1][1]:        # if the first point y vlaue is less than second point y value 
+            if list(row['geometry'].coords)[0][1]>list(row['geometry'].coords)[-1][1]:        # if the first point y vlaue is less than second point y value 
                 new_line = shapely.geometry.LineString(list(row['geometry'].coords)[::-1])  #swap
             else:
                 new_line = row['geometry']
             output[i] = new_line
     if (direction=="east"):
         for i,row in gdf.iterrows():
-            if list(row['geometry'].coords)[0][0]<list(row['geometry'].coords)[1][0]:        # if the first point x vlaue is less than second point x value 
+            if list(row['geometry'].coords)[0][0]<list(row['geometry'].coords)[-1][0]:        # if the first point x vlaue is less than second point x value 
                 new_line = shapely.geometry.LineString(list(row['geometry'].coords)[::-1])  #swap , logic: first point x is greater than second x, we do not flip ,otherwise...
             else:
                 new_line = row['geometry']
             output[i] = new_line       
     if (direction=="west"):
         for i,row in gdf.iterrows():
-            if list(row['geometry'].coords)[0][0]>list(row['geometry'].coords)[1][0]:        # if the first point x vlaue is less than second point x value 
+            if list(row['geometry'].coords)[0][0]>list(row['geometry'].coords)[-1][0]:        # if the first point x vlaue is less than second point x value 
                 new_line = shapely.geometry.LineString(list(row['geometry'].coords)[::-1])  #swap, logic: first point x is less than second x ,we do not flip ,otherwise...
             else:
                 new_line = row['geometry']
