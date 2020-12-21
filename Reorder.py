@@ -53,7 +53,8 @@ def reorder(gdf,direction):
             else:
                 new_line = row['geometry']
             output[i] = new_line 
-    output = gpd.GeoSeries(output)    
+    output = gpd.GeoSeries(output) 
+    output.name = 'geometry'   
     return output
            
             
